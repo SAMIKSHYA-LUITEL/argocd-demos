@@ -11,8 +11,6 @@ spec:
             path: ui_approach/nginx
           - app: online-shop
             path: multicluster/online-shop
-          - app: chai-app
-            path: applicationsets/chai-app
           - app: apache
             path: cli_approach/apache
   template:
