@@ -6,7 +6,7 @@ metadata:
   annotations:
     notifications.argoproj.io/subscribe.on-health-degraded.email: "samikshyaluitel5@gmail.com"
     notifications.argoproj.io/subscribe.on-deployed.email: "samikshyaluitel5@gmail.com"
-  spec:
+spec:
     project: default
     source:
       repoURL: https://github.com/SAMIKSHYA-LUITEL/argocd-demos.git
