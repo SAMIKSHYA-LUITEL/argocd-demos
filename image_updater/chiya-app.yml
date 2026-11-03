@@ -15,4 +15,7 @@ spec:
     - namePattern: chiya-app
       images:
         - alias: chiya
-          imageName: samluitel0987/chai-devops:1.x
+          imageName: samluitel0987/chiya-devops:1.x
+          manifestTargets:
+            kustomize:
+              name: samluitel0987/chiya-devops
