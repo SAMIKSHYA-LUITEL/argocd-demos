@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - samluitel0987/chiya-devops:v1.0.1
