@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chai-app
+  name: chiya-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: chai-app
+      app: chiya-app
   template:
     metadata:
       labels:
-        app: chai-app
+        app: chiya-app
     spec:
       containers:
-      - name: chai-app
-        image: trainwithshubham/chai-devops:v1.0.0
+      - name: chiya-app
+        image: samluitel0987/chiya-devops:v1.0.0
         ports:
         - containerPort: 80
         env:
         - name: VITE_GEMINI_API
           valueFrom:
             secretKeyRef:
-              name: chai-app-secret
+              name: chiya-app-secret
               key: VITE_GEMINI_API
         resources:
           requests:
