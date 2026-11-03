@@ -1,0 +1,18 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: chiya-app-updater
+  namespace: argocd
+spec:
+  writeBackConfig:
+    method: git:secret:argocd/argocd-image-updater-git-creds
+    gitConfig:
+      repository: https://github.com/SAMIKSHYA-LUITEL/argocd-demos.git
+      branch: main
+  commonUpdateSettings:
+    updateStrategy: semver
+  applicationRefs:
+    - namePattern: chiya-app
+      images:
+        - alias: chiya
+          imageName: samluitel0987/chai-devops:1.x
